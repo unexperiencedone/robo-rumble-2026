@@ -10,7 +10,6 @@ import { RulesSection } from "@/components/sections/RulesSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 import { RegistrationCTA } from "@/components/sections/RegistrationCTA";
 import { GallerySection } from "@/components/sections/GallerySection";
-import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -74,8 +73,6 @@ export default function Home() {
           <RegistrationCTA />
         </section>
 
-        {/* FOOTER: System Offline Style */}
-        <Footer />
       </div>
     </main>
   );
