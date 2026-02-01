@@ -10,7 +10,7 @@ interface Track {
   description: string;
   difficulty: "Beginner" | "Intermediate" | "Expert" | "Lethal";
   features: string[];
-  icon: React.ElementType;
+  icon: React.ComponentType<{ className?: string }>;
   color: string;
 }
 
@@ -22,7 +22,7 @@ const tracks: Track[] = [
     difficulty: "Intermediate",
     features: ["Hyper-Glass Surface", "Laser Barriers", "Zero-G Zones"],
     icon: Zap,
-    color: "text-teal-400",
+    color: "teal-400",
   },
   {
     id: "the-pit",
@@ -31,7 +31,7 @@ const tracks: Track[] = [
     difficulty: "Lethal",
     features: ["Flame Jets", "Spike Traps", "Hydraulic Crushers"],
     icon: Skull,
-    color: "text-red-500",
+    color: "red-500",
   },
   {
     id: "quantum-gauntlet",
@@ -40,7 +40,7 @@ const tracks: Track[] = [
     difficulty: "Expert",
     features: ["Holographic Decoys", "Emp Fields", "Moving Platforms"],
     icon: Target,
-    color: "text-violet-500",
+    color: "violet-500",
   },
 ];
 
@@ -88,7 +88,7 @@ function TrackCard({ track, index }: { track: Track; index: number }) {
                 {/* Image Placeholder / Gradient Header */}
                 <div className={`h-48 w-full rounded-xl bg-gradient-to-br from-black to-gray-900 flex items-center justify-center relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500`}>
                     <div className={`absolute inset-0 bg-${track.color}/10 group-hover:bg-${track.color}/20 transition-all`} />
-                    <Icon className={`w-20 h-20 ${track.color} opacity-80 group-hover:scale-110 group-hover:brightness-150 transition-all duration-500`} />
+                    <Icon className={`w-20 h-20 text-${track.color} opacity-80 group-hover:scale-110 group-hover:brightness-150 transition-all duration-500`} />
                     
                     {/* Badge */}
                     <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-xs font-mono text-white">

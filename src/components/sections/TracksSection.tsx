@@ -16,7 +16,7 @@ interface Track {
   description: string;
   difficulty: "Beginner" | "Intermediate" | "Expert" | "Lethal";
   features: string[];
-  icon: React.ElementType;
+  icon: React.ComponentType<{ className?: string }>;
   color: string;
 }
 
